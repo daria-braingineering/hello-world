@@ -37,12 +37,12 @@ jobs:
           appSourcePath: ${{ github.workspace }}
           _dockerfilePathKey_: _dockerfilePath_
           _targetLabelKey_: _targetLabel_
-          registryUrl: helloworlddasha.azurecr.io
+          registryUrl: helloworlddashabraingineering.azurecr.io
           registryUsername: ${{ secrets.HELLOWORLD1_REGISTRY_USERNAME }}
           registryPassword: ${{ secrets.HELLOWORLD1_REGISTRY_PASSWORD }}
-          containerAppName: hello-world-1
-          resourceGroup: Test
-          imageToBuild: helloworlddasha.azurecr.io/hello-world-1:${{ github.sha }}
+          containerAppName: hello-world-dasha
+          resourceGroup: rg-dasha-dev
+          imageToBuild: helloworlddashabraingineering.azurecr.io/hello-world-dasha:${{ github.sha }}
           _buildArgumentsKey_: |
             _buildArgumentsValues_
 
