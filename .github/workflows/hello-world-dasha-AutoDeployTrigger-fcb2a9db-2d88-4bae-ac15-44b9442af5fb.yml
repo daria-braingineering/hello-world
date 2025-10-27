@@ -42,6 +42,7 @@ jobs:
           registryPassword: ${{ secrets.HELLOWORLDDASHA_REGISTRY_PASSWORD }}
           containerAppName: hello-world-dasha
           resourceGroup: rg-dasha-dev
+          NAME: ${{ secrets.NEXT_PUBLIC_NAME }}
           imageToBuild: helloworlddashabraingineering.azurecr.io/hello-world-dasha:${{ github.sha }}
           _buildArgumentsKey_: |
             _buildArgumentsValues_
