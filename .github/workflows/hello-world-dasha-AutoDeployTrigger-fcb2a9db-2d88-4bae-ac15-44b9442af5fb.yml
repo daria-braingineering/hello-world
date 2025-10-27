@@ -43,6 +43,6 @@ jobs:
           
           imageToBuild: helloworlddashabraingineering.azurecr.io/hello-world-dasha:${{ github.sha }}
           buildArguments: |
-            NEXT_PUBLIC_NAME: ${{ secrets.NEXT_PUBLIC_NAME }}
+            NEXT_PUBLIC_NAME= ${{ secrets.NEXT_PUBLIC_NAME }}
 
 
