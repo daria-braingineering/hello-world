@@ -35,8 +35,6 @@ jobs:
         uses: azure/container-apps-deploy-action@v2
         with:
           appSourcePath: ${{ github.workspace }}
-          _dockerfilePathKey_: _dockerfilePath_
-          _targetLabelKey_: _targetLabel_
           registryUrl: helloworlddashabraingineering.azurecr.io
           registryUsername: ${{ secrets.HELLOWORLDDASHA_REGISTRY_USERNAME }}
           registryPassword: ${{ secrets.HELLOWORLDDASHA_REGISTRY_PASSWORD }}
@@ -44,7 +42,7 @@ jobs:
           resourceGroup: rg-dasha-dev
           
           imageToBuild: helloworlddashabraingineering.azurecr.io/hello-world-dasha:${{ github.sha }}
-          buildArgumentsKey: |
+          buildArguments: |
             NEXT_PUBLIC_NAME: ${{ secrets.NEXT_PUBLIC_NAME }}
 
 
